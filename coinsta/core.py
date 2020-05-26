@@ -83,7 +83,7 @@ class Historical:
             raise WrongCoinCode("'{0}' is unavailable on CoinMarketCap.com. "
                                 "Please check the website for the right ticker name".format(slug))
 
-        df = data[-1]
+        df = data[-2]
 
         # Clean up the DataFrame
         df['Date'] = pd.to_datetime(df['Date'])
